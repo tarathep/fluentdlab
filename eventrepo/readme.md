@@ -1,10 +1,23 @@
 # HOW TO ?
 
+
 > docker pull kietara/fluentd-plugin:1.0.0
+
+https://github.com/tarathep/fluentdlab/tree/master/eventrepo/build
+
 
 > docker pull kietara/eventrepo-backend:1.0.0
 
+https://git.matador.ais.co.th/bpam_micro/production/eventrepo_backend
+
+
 > docker pull kietara/eventrepo_frontend:1.0.0
+
+https://git.matador.ais.co.th/bpam_micro/production/eventrepo_frontend
+
+
+
+
 
 ### STEP 1 MONGO LOG FLUENTD
 > sudo docker run -d --name fluend-log-mongo -p 27017:27017 mongo
