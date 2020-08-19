@@ -1,22 +1,10 @@
 # HOW TO ?
 
-
 > docker pull kietara/fluentd-plugin:1.0.0
-
-https://github.com/tarathep/fluentdlab/tree/master/eventrepo/build
-
 
 > docker pull kietara/eventrepo-backend:1.0.0
 
-https://git.matador.ais.co.th/bpam_micro/production/eventrepo_backend
-
-
 > docker pull kietara/eventrepo_frontend:1.0.0
-
-https://git.matador.ais.co.th/bpam_micro/production/eventrepo_frontend
-
-
-
 
 
 ### STEP 1 MONGO LOG FLUENTD
@@ -26,7 +14,8 @@ https://git.matador.ais.co.th/bpam_micro/production/eventrepo_frontend
 https://github.com/tarathep/fluentdlab/tree/master/eventrepo/config
 > sudo docker run --name fluentd --rm -it -v $(pwd)/config.conf:/fluentd/etc/config.conf -e FLUENTD_CONF=config.conf -p 24224:24224 kietara/fluentd-plugin:1.0.0
 
-### STEP3 RUN APP EventRepoBackend in root dir proejct (project at git.matador.ais.co.th)
+### STEP3 RUN APP EventRepoBackend in root dir proejct
+https://git.matador.ais.co.th/bpam_micro/production/eventrepo_backend
 > sudo docker run -it --rm --name eventrepo-backend -p 8291:8291 -v $(pwd)/config:/config -v $(pwd)/log:/log -v $(pwd)/libjava:/libjava kietara/eventrepo-backend:1.0.0
 
 !ps . you can check config file in config/config.yml is match with env ?
